@@ -1,0 +1,62 @@
+@use 'abstracts' as *;
+@use 'components' as *;
+@use 'layouts' as *;
+@use 'mixins' as *;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+code {
+  font-family: Consolas,"courier new";
+  color: $dark;
+  background-color: $secondary;
+  padding: 2px;
+  font-size: 105%;
+}
+img {
+  border-radius: 0.5rem;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  background-clip: none;
+}
+button {
+  cursor: pointer;
+  background-clip: none;
+}
+* {
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+  // create a text fill effect
+  background: linear-gradient(45deg, darken($tertiary, 10%), lighten($primary, 20%));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  span {
+    font-size: 1.15rem;
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background: linear-gradient(90deg, $dark, darken($dark, 5%));
+  color: $primary;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: $light;
+    background: $dark;
+  }
+}
