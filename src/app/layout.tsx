@@ -10,8 +10,10 @@ export default function RootLayout({ children }: any) {
       <head>
         <title>Next.js</title>
       </head>
-      <Header />
-      <body className="container">{children}</body>
+      <body className="container">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

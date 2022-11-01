@@ -21,7 +21,6 @@ export default function BlogCard({
   height,
   width,
 }: IBlogCard) {
-
   return (
     <Link href={`/blog/${slug}`}>
       <div className="card-primary">
@@ -29,12 +28,14 @@ export default function BlogCard({
           <Image
             alt={metaTitle}
             src={`/${imageURL}`}
-            height={height}
-            width={width}
+            fill
+            sizes="(max-width: 768px) 100vw,
+            (max-width: 1200px) 50vw,
+            33vw"
           />
         </p>
         <h3>{title}</h3>
-        <p>{DateChanger(date)}</p>
+        <h4>{DateChanger(date)}</h4>
       </div>
     </Link>
   );
