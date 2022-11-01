@@ -8,8 +8,6 @@ interface IBlogCard {
   metaTitle: string;
   imageURL: string;
   slug: string;
-  height: number;
-  width: number;
 }
 
 export default function BlogCard({
@@ -18,8 +16,6 @@ export default function BlogCard({
   metaTitle,
   imageURL,
   slug,
-  height,
-  width,
 }: IBlogCard) {
   return (
     <Link href={`/blog/${slug}`}>
