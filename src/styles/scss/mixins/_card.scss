@@ -57,18 +57,3 @@
   @include card($bg-color, $text-color, $border-color);
   background: linear-gradient($deg, $bg-color, darken($bg-color, 40%));
 }
-
-// @media (max-width: 1200px) {
-//   .card {
-//     p {
-//       height: 300px;
-//     }
-//   }
-// }
-// @media (max-width: 992px) {
-//   .card {
-//    p {
-//       height: 200px;
-//     }
-//    }
-// }
