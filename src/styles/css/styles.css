@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 .card-primary {
   display: flex;
   flex-direction: column;
@@ -594,6 +596,19 @@
   box-shadow: 0px 0px 5px #fff;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background: linear-gradient(90deg, #292b2c, #1d1e1f);
+  color: #cbb26a;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -646,6 +661,9 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-family: "Space Mono", monospace;
+  line-height: 1.5;
+  font-size: 1.1rem;
 }
 
 code {
@@ -676,24 +694,13 @@ button {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Comfortaa", cursive;
   background: linear-gradient(45deg, #9a7f35, #e5d9b6);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   font-size: 1.15rem;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1rem;
-  background: linear-gradient(90deg, #292b2c, #1d1e1f);
-  color: #cbb26a;
 }
 
 @media (prefers-color-scheme: dark) {
