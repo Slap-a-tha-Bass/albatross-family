@@ -4,12 +4,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 15px 2rem;
   transition-duration: 500ms;
-  border: 2px solid #cbb26a;
   border-radius: 0.25rem;
   box-shadow: #998036 0px 0px 10px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.2588235294);
 }
 .card-primary:hover {
   transform: scale(1.05);
@@ -35,15 +34,15 @@
 }
 .card-primary p {
   position: relative;
-  height: 400px;
-  margin: 1rem;
+  margin: 2rem;
+  height: 300px;
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #cbb26a;
 }
 .card-primary p img {
-  box-shadow: 0px 0px 25px #be9e44;
+  box-shadow: 0px 0px 40px #be9e44;
 }
 .card-primary a {
   margin-top: 0.5rem;
@@ -60,9 +59,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 15px 2rem;
   transition-duration: 500ms;
-  border: 2px solid #d8c690;
   border-radius: 0.25rem;
   box-shadow: #bd9f45 0px 0px 10px;
   background-color: transparent;
@@ -91,15 +89,15 @@
 }
 .card-secondary p {
   position: relative;
-  height: 400px;
-  margin: 1rem;
+  margin: 2rem;
+  height: 300px;
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #d8c690;
 }
 .card-secondary p img {
-  box-shadow: 0px 0px 25px #cbb36a;
+  box-shadow: 0px 0px 40px #cbb36a;
 }
 .card-secondary a {
   margin-top: 0.5rem;
@@ -116,9 +114,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 15px 2rem;
   transition-duration: 500ms;
-  border: 2px solid #be9e44;
   border-radius: 0.25rem;
   box-shadow: #746028 0px 0px 10px;
   background-color: transparent;
@@ -147,15 +144,15 @@
 }
 .card-tertiary p {
   position: relative;
-  height: 400px;
-  margin: 1rem;
+  margin: 2rem;
+  height: 300px;
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #be9e44;
 }
 .card-tertiary p img {
-  box-shadow: 0px 0px 25px #9a7f35;
+  box-shadow: 0px 0px 40px #9a7f35;
 }
 .card-tertiary a {
   margin-top: 0.5rem;
@@ -172,9 +169,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 15px 2rem;
   transition-duration: 500ms;
-  border: 2px solid #5cb85c;
   border-radius: 0.25rem;
   box-shadow: #357935 0px 0px 10px;
   background-color: transparent;
@@ -203,15 +199,15 @@
 }
 .card-success p {
   position: relative;
-  height: 400px;
-  margin: 1rem;
+  margin: 2rem;
+  height: 300px;
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #5cb85c;
 }
 .card-success p img {
-  box-shadow: 0px 0px 25px #449d44;
+  box-shadow: 0px 0px 40px #449d44;
 }
 .card-success a {
   margin-top: 0.5rem;
@@ -228,9 +224,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 15px 2rem;
   transition-duration: 500ms;
-  border: 2px solid #f0ad4e;
   border-radius: 0.25rem;
   box-shadow: #c77c11 0px 0px 10px;
   background-color: transparent;
@@ -259,15 +254,15 @@
 }
 .card-warning p {
   position: relative;
-  height: 400px;
-  margin: 1rem;
+  margin: 2rem;
+  height: 300px;
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #f0ad4e;
 }
 .card-warning p img {
-  box-shadow: 0px 0px 25px #ec971f;
+  box-shadow: 0px 0px 40px #ec971f;
 }
 .card-warning a {
   margin-top: 0.5rem;
@@ -284,9 +279,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 15px 2rem;
   transition-duration: 500ms;
-  border: 2px solid #d7251f;
   border-radius: 0.25rem;
   box-shadow: #7e1612 0px 0px 10px;
   background-color: transparent;
@@ -315,15 +309,15 @@
 }
 .card-danger p {
   position: relative;
-  height: 400px;
-  margin: 1rem;
+  margin: 2rem;
+  height: 300px;
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #d7251f;
 }
 .card-danger p img {
-  box-shadow: 0px 0px 25px #aa1d19;
+  box-shadow: 0px 0px 40px #aa1d19;
 }
 .card-danger a {
   margin-top: 0.5rem;
@@ -340,9 +334,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 15px 2rem;
   transition-duration: 500ms;
-  border: 2px solid #5bc0de;
   border-radius: 0.25rem;
   box-shadow: #2390b0 0px 0px 10px;
   background-color: transparent;
@@ -371,15 +364,15 @@
 }
 .card-info p {
   position: relative;
-  height: 400px;
-  margin: 1rem;
+  margin: 2rem;
+  height: 300px;
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #5bc0de;
 }
 .card-info p img {
-  box-shadow: 0px 0px 25px #31b0d5;
+  box-shadow: 0px 0px 40px #31b0d5;
 }
 .card-info a {
   margin-top: 0.5rem;
@@ -396,9 +389,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 15px 2rem;
   transition-duration: 500ms;
-  border: 2px solid #292b2c;
   border-radius: 0.25rem;
   box-shadow: black 0px 0px 10px;
   background-color: #f7f7f7;
@@ -427,15 +419,15 @@
 }
 .card-light p {
   position: relative;
-  height: 400px;
-  margin: 1rem;
+  margin: 2rem;
+  height: 300px;
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #292b2c;
 }
 .card-light p img {
-  box-shadow: 0px 0px 25px #101112;
+  box-shadow: 0px 0px 40px #101112;
 }
 .card-light a {
   margin-top: 0.5rem;
@@ -452,9 +444,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 15px 2rem;
   transition-duration: 500ms;
-  border: 2px solid #292b2c;
   border-radius: 0.25rem;
   box-shadow: black 0px 0px 10px;
   background-color: transparent;
@@ -483,15 +474,15 @@
 }
 .card-dark p {
   position: relative;
-  height: 400px;
-  margin: 1rem;
+  margin: 2rem;
+  height: 300px;
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #f7f7f7;
 }
 .card-dark p img {
-  box-shadow: 0px 0px 25px #101112;
+  box-shadow: 0px 0px 40px #101112;
 }
 .card-dark a {
   margin-top: 0.5rem;
@@ -508,9 +499,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 15px 2rem;
   transition-duration: 500ms;
-  border: 2px solid #cbb26a;
   border-radius: 0.25rem;
   box-shadow: #998036 0px 0px 10px;
   background-color: #cbb26a;
@@ -540,15 +530,15 @@
 }
 .card-gradient-primary p {
   position: relative;
-  height: 400px;
-  margin: 1rem;
+  margin: 2rem;
+  height: 300px;
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #f7f7f7;
 }
 .card-gradient-primary p img {
-  box-shadow: 0px 0px 25px #be9e44;
+  box-shadow: 0px 0px 40px #be9e44;
 }
 .card-gradient-primary a {
   margin-top: 0.5rem;
