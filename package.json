@@ -1,5 +1,6 @@
 {
-  "name": "edgedb-nextjs-13",
+  "name": "albatross-family-blog",
+  "author": "Corey DeLoach",
   "version": "0.1.0",
   "private": true,
   "scripts": {
