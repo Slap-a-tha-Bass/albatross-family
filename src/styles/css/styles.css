@@ -34,7 +34,7 @@
 }
 .card-primary p {
   position: relative;
-  margin: 2rem;
+  margin: 1rem;
   height: 300px;
   text-align: center;
   font-size: 0.875rem;
@@ -55,6 +55,17 @@
   color: #998036;
 }
 
+@media (max-width: 1200px) {
+  .card-primary {
+    width: 90%;
+    padding: 15px 1rem;
+  }
+}
+@media (max-width: 992px) {
+  .card-primary {
+    width: 90%;
+  }
+}
 .card-secondary {
   display: flex;
   flex-direction: column;
@@ -89,7 +100,7 @@
 }
 .card-secondary p {
   position: relative;
-  margin: 2rem;
+  margin: 1rem;
   height: 300px;
   text-align: center;
   font-size: 0.875rem;
@@ -144,7 +155,7 @@
 }
 .card-tertiary p {
   position: relative;
-  margin: 2rem;
+  margin: 1rem;
   height: 300px;
   text-align: center;
   font-size: 0.875rem;
@@ -199,7 +210,7 @@
 }
 .card-success p {
   position: relative;
-  margin: 2rem;
+  margin: 1rem;
   height: 300px;
   text-align: center;
   font-size: 0.875rem;
@@ -254,7 +265,7 @@
 }
 .card-warning p {
   position: relative;
-  margin: 2rem;
+  margin: 1rem;
   height: 300px;
   text-align: center;
   font-size: 0.875rem;
@@ -309,7 +320,7 @@
 }
 .card-danger p {
   position: relative;
-  margin: 2rem;
+  margin: 1rem;
   height: 300px;
   text-align: center;
   font-size: 0.875rem;
@@ -364,7 +375,7 @@
 }
 .card-info p {
   position: relative;
-  margin: 2rem;
+  margin: 1rem;
   height: 300px;
   text-align: center;
   font-size: 0.875rem;
@@ -419,7 +430,7 @@
 }
 .card-light p {
   position: relative;
-  margin: 2rem;
+  margin: 1rem;
   height: 300px;
   text-align: center;
   font-size: 0.875rem;
@@ -474,7 +485,7 @@
 }
 .card-dark p {
   position: relative;
-  margin: 2rem;
+  margin: 1rem;
   height: 300px;
   text-align: center;
   font-size: 0.875rem;
@@ -530,7 +541,7 @@
 }
 .card-gradient-primary p {
   position: relative;
-  margin: 2rem;
+  margin: 1rem;
   height: 300px;
   text-align: center;
   font-size: 0.875rem;
@@ -591,7 +602,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 10%;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -601,6 +612,109 @@ header {
   z-index: 1;
 }
 
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .container {
   width: 100%;
   max-width: 1200px;
@@ -631,10 +745,9 @@ header {
 
 .container-grid {
   display: grid;
-  position: fixed;
   top: 0;
   left: 0;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 1.5rem;
   width: 100%;
   max-width: 1200px;
@@ -643,7 +756,7 @@ header {
 }
 
 .container-sidebar {
-  margin-top: 5%;
+  margin-top: 7.5vh;
   padding: 0;
   min-width: 10%;
   max-width: 30%;
@@ -685,6 +798,15 @@ header {
   left: 20%;
   height: 100%;
   overflow: auto;
+}
+
+.container-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
 }
 
 html,

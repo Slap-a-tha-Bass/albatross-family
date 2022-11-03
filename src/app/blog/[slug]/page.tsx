@@ -3,6 +3,7 @@ import matter from 'gray-matter';
 import MarkdownIt from 'markdown-it';
 import GetPosts from '@utils/getPosts';
 import { use } from 'react';
+import Image from 'next/image';
 
 async function getOnePost({ slug }: any) {
   const files = fs.readdirSync(`src/posts`);
@@ -29,9 +30,19 @@ export default function Page({ params }: any) {
   const md = new MarkdownIt();
   const result = md.render(post ? post.content : '');
   return (
-    <div className='container-flex'>
+    <div className="container-flex">
       <h1>{post?.blogPost.title}</h1>
       {<div dangerouslySetInnerHTML={{ __html: result }} />}
+      {post.blogPost.images &&
+        post.blogPost.images.map((image: any) => (
+          <Image
+            key={image}
+            src={`/${image}`}
+            alt={post?.blogPost.title}
+            height={post?.blogPost.socialImageHeight}
+            width={post?.blogPost.socialImageWidth}
+          />
+        ))}
     </div>
   );
 }

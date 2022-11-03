@@ -5,3 +5,15 @@
   // card($bg-color, $text-color, $border-color)
   @include card($trans-dark, $primary, $primary);
 }
+
+@media (max-width: 1200px) {
+  .card-primary {
+    width: 90%;
+    padding: 15px 1rem;
+  }
+}
+@media (max-width: 992px) {
+  .card-primary {
+    width: 90%;
+  }
+}

@@ -4,6 +4,10 @@ slug: 'vienna-austria'
 metaTitle: 'Our trip to Austria'
 metaDesc: 'Albatross Family Blog'
 socialImage: stcharles.png
+images:
+  - alley-way.png
+  - ceren-vineyards.png
+  - stcharles.png
 socialImageHeight: 400
 socialImageWidth: 320
 date: '2022-04-19'
@@ -20,14 +24,6 @@ We have all seen that person in the front of class consistently raising their ha
 How I love her so *and* realize everyone likes to be right... 
 
 **however** 
-
-![Alley Way](/alley-way.png)
-
-![Ceren Vineyards](/ceren-vineyards.png)
-
-![St Charles](/stcharles.png)
-
-
 
 ### WOW
 
