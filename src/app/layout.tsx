@@ -5,7 +5,7 @@ export default function RootLayout({ children }: any) {
   return (
     <html lang="en">
       <head>
-        <title>Next.js</title>
+        <title>albatross family</title>
       </head>
       <body className="container">
         <Header />

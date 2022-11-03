@@ -591,12 +591,14 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  height: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
   background: linear-gradient(90deg, #292b2c, #1d1e1f);
   color: #cbb26a;
+  z-index: 1;
 }
 
 .container {
@@ -629,7 +631,10 @@ header {
 
 .container-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  position: fixed;
+  top: 0;
+  left: 0;
+  grid-template-columns: 1fr 3fr;
   grid-gap: 1.5rem;
   width: 100%;
   max-width: 1200px;
@@ -638,13 +643,48 @@ header {
 }
 
 .container-sidebar {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-gap: 1rem;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  margin-top: 5%;
+  padding: 0;
+  min-width: 10%;
+  max-width: 30%;
+  width: 20%;
+  display: block;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.2588235294), rgba(0, 0, 0, 0.2588235294));
+  color: #cbb26a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+}
+.container-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+.container-sidebar ul li {
+  padding: 8px 8px 8px 16px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+.container-sidebar ul li:hover {
+  background-color: #cbb26a;
+  color: #292b2c;
+}
+
+.container-content {
+  margin-top: 5%;
+  padding: 0;
+  min-width: 70%;
+  max-width: 90%;
+  display: block;
+  background-color: transparent;
+  color: #cbb26a;
+  position: fixed;
+  top: 0;
+  left: 20%;
+  height: 100%;
+  overflow: auto;
 }
 
 html,

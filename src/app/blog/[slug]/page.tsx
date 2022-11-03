@@ -2,6 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import MarkdownIt from 'markdown-it';
 import GetPosts from '@utils/getPosts';
+import { use } from 'react';
 
 async function getOnePost({ slug }: any) {
   const files = fs.readdirSync(`src/posts`);
@@ -22,9 +23,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({ params }: any) {
+export default function Page({ params }: any) {
   const { slug } = params;
-  const post: any = await getOnePost({ slug: slug });
+  const post: any = use(getOnePost({ slug: slug }));
   const md = new MarkdownIt();
   const result = md.render(post ? post.content : '');
   return (
