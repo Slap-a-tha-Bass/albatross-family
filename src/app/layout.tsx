@@ -7,7 +7,7 @@ export default function RootLayout({ children }: any) {
       <head>
         <title>albatross family</title>
       </head>
-      <body className="container">
+      <body>
         <Header />
         {children}
       </body>
