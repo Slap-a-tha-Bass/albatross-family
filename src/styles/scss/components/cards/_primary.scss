@@ -8,12 +8,16 @@
 
 @media (max-width: 1200px) {
   .card-primary {
-    width: 90%;
-    padding: 15px 1rem;
+    width: 100%;
   }
 }
 @media (max-width: 991px) {
   .card-primary {
     width: 90%;
+  }
+}
+@media (max-width: 617px) {
+  .card-primary {
+    width: 120%;
   }
 }

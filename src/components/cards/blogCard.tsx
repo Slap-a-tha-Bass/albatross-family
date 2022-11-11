@@ -26,7 +26,6 @@ export default function BlogCard({
             src={`/${imageURL}`}
             fill
             priority
-            object-fit="contain"
             sizes="(max-width: 768px) 100vw,
             (max-width: 1200px) 50vw,
             33vw"

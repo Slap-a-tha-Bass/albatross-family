@@ -4,8 +4,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15px 2rem;
-  transition-duration: 500ms;
+  padding: 15px 1rem;
+  min-width: 300px;
+  transition: ease-in-out 0.3s;
   border-radius: 0.25rem;
   box-shadow: #998036 0px 0px 10px;
   background-color: rgba(0, 0, 0, 0.2588235294);
@@ -57,8 +58,7 @@
 
 @media (max-width: 1200px) {
   .card-primary {
-    width: 90%;
-    padding: 15px 1rem;
+    width: 100%;
   }
 }
 @media (max-width: 991px) {
@@ -66,12 +66,18 @@
     width: 90%;
   }
 }
+@media (max-width: 617px) {
+  .card-primary {
+    width: 120%;
+  }
+}
 .card-secondary {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15px 2rem;
-  transition-duration: 500ms;
+  padding: 15px 1rem;
+  min-width: 300px;
+  transition: ease-in-out 0.3s;
   border-radius: 0.25rem;
   box-shadow: #bd9f45 0px 0px 10px;
   background-color: transparent;
@@ -125,8 +131,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15px 2rem;
-  transition-duration: 500ms;
+  padding: 15px 1rem;
+  min-width: 300px;
+  transition: ease-in-out 0.3s;
   border-radius: 0.25rem;
   box-shadow: #746028 0px 0px 10px;
   background-color: transparent;
@@ -180,8 +187,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15px 2rem;
-  transition-duration: 500ms;
+  padding: 15px 1rem;
+  min-width: 300px;
+  transition: ease-in-out 0.3s;
   border-radius: 0.25rem;
   box-shadow: #357935 0px 0px 10px;
   background-color: transparent;
@@ -235,8 +243,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15px 2rem;
-  transition-duration: 500ms;
+  padding: 15px 1rem;
+  min-width: 300px;
+  transition: ease-in-out 0.3s;
   border-radius: 0.25rem;
   box-shadow: #c77c11 0px 0px 10px;
   background-color: transparent;
@@ -290,8 +299,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15px 2rem;
-  transition-duration: 500ms;
+  padding: 15px 1rem;
+  min-width: 300px;
+  transition: ease-in-out 0.3s;
   border-radius: 0.25rem;
   box-shadow: #7e1612 0px 0px 10px;
   background-color: transparent;
@@ -345,8 +355,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15px 2rem;
-  transition-duration: 500ms;
+  padding: 15px 1rem;
+  min-width: 300px;
+  transition: ease-in-out 0.3s;
   border-radius: 0.25rem;
   box-shadow: #2390b0 0px 0px 10px;
   background-color: transparent;
@@ -400,8 +411,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15px 2rem;
-  transition-duration: 500ms;
+  padding: 15px 1rem;
+  min-width: 300px;
+  transition: ease-in-out 0.3s;
   border-radius: 0.25rem;
   box-shadow: black 0px 0px 10px;
   background-color: #f7f7f7;
@@ -455,8 +467,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15px 2rem;
-  transition-duration: 500ms;
+  padding: 15px 1rem;
+  min-width: 300px;
+  transition: ease-in-out 0.3s;
   border-radius: 0.25rem;
   box-shadow: black 0px 0px 10px;
   background-color: transparent;
@@ -510,8 +523,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15px 2rem;
-  transition-duration: 500ms;
+  padding: 15px 1rem;
+  min-width: 300px;
+  transition: ease-in-out 0.3s;
   border-radius: 0.25rem;
   box-shadow: #998036 0px 0px 10px;
   background-color: #cbb26a;
@@ -611,6 +625,41 @@ header {
   color: #cbb26a;
   z-index: 1;
 }
+header h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+header h2 span {
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 768px) {
+  header h2 span {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  header h2 span {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  header h2 {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  header h2 {
+    font-size: 1rem;
+  }
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #cbb26a;
+}
 
 .lds-roller {
   display: inline-block;
@@ -631,7 +680,7 @@ header {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #fff;
+  background: #cbb26a;
   margin: -4px 0 0 -4px;
 }
 
@@ -715,48 +764,59 @@ header {
     transform: rotate(360deg);
   }
 }
-.container-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
-  width: 100%;
-  margin: 10vh auto;
-  padding: 1rem;
+.main {
+  min-height: 100vh;
+  padding-top: 10vh;
 }
 
 .container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+  width: 100%;
+}
+
+.img-container {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10vh;
-  height: 45vh;
+  height: 65vh;
   width: 100%;
+  border-bottom: 2px solid #be9e44;
 }
 @media screen and (max-width: 1200px) {
-  .container-center {
-    height: 40vh;
+  .img-container {
+    height: 60vh;
   }
 }
 @media screen and (max-width: 992px) {
-  .container-center {
-    height: 35vh;
+  .img-container {
+    height: 57.5vh;
   }
 }
 @media screen and (max-width: 768px) {
-  .container-center {
-    height: 30vh;
+  .img-container {
+    height: 55vh;
   }
 }
 @media screen and (max-width: 640px) {
-  .container-center {
-    height: 25vh;
+  .img-container {
+    height: 52.5vh;
   }
 }
 @media screen and (max-width: 550px) {
-  .container-center {
-    height: 20vh;
+  .img-container {
+    height: 50vh;
   }
 }
 
@@ -766,38 +826,10 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  height: 45vh;
   width: 100%;
-}
-@media screen and (max-width: 1200px) {
-  .container-bottom {
-    height: 40vh;
-  }
-}
-@media screen and (max-width: 992px) {
-  .container-bottom {
-    height: 35vh;
-  }
-}
-@media screen and (max-width: 768px) {
-  .container-bottom {
-    height: 30vh;
-  }
-}
-@media screen and (max-width: 640px) {
-  .container-bottom {
-    height: 25vh;
-  }
-}
-@media screen and (max-width: 550px) {
-  .container-bottom {
-    height: 20vh;
-  }
 }
 .container-bottom h1 {
   font-size: 3rem;
-  z-index: 1;
 }
 @media screen and (max-width: 992px) {
   .container-bottom h1 {
@@ -812,83 +844,71 @@ header {
 @media screen and (max-width: 640px) {
   .container-bottom h1 {
     font-size: 1.75rem;
-    top: 4vh;
   }
 }
 @media screen and (max-width: 550px) {
   .container-bottom h1 {
     font-size: 1.5rem;
-    top: 3vh;
   }
 }
 .container-bottom p {
   width: 100%;
   text-align: center;
   font-size: 1.2rem;
-  z-index: 1;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2588235294);
 }
 @media screen and (max-width: 1200px) {
   .container-bottom p {
     font-size: 1rem;
-    top: 15vh;
   }
 }
 @media screen and (max-width: 992px) {
   .container-bottom p {
     font-size: 0.9rem;
-    top: 12vh;
   }
 }
 @media screen and (max-width: 768px) {
   .container-bottom p {
     font-size: 0.875rem;
-    top: 10vh;
   }
 }
 @media screen and (max-width: 640px) {
   .container-bottom p {
     font-size: 0.85rem;
-    top: 8vh;
   }
 }
 @media screen and (max-width: 550px) {
   .container-bottom p {
     font-size: 0.8rem;
-    top: 7vh;
   }
 }
 .container-bottom a {
   font-size: 1.25rem;
-  z-index: 1;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  font-weight: 700;
 }
 .container-bottom a:hover {
-  background: linear-gradient(45deg, black, #292b2c);
+  text-decoration: underline;
 }
 @media screen and (max-width: 992px) {
   .container-bottom a {
     font-size: 1.15rem;
-    top: 45vh;
   }
 }
 @media screen and (max-width: 768px) {
   .container-bottom a {
     font-size: 1rem;
-    top: 35vh;
   }
 }
 @media screen and (max-width: 640px) {
   .container-bottom a {
     font-size: 0.875rem;
-    top: 30vh;
   }
 }
 @media screen and (max-width: 550px) {
   .container-bottom a {
     font-size: 0.75rem;
-    top: 25vh;
   }
 }
 

@@ -13,4 +13,23 @@ header {
     background: linear-gradient(90deg, $dark, darken($dark, 5%));
     color: $primary;
     z-index: 1;
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        span {
+            font-size: 1.25rem;
+            @media screen and (max-width: 768px) {
+                font-size: 1rem;
+            }
+            @media screen and (max-width: 550px) {
+                font-size: 0.875rem;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 1.25rem;
+        }
+        @media screen and (max-width: 550px) {
+            font-size: 1rem;
+        }
+    }
 }

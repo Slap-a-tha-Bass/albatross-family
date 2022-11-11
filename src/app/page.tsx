@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default async function Page() {
   return (
     <div>
-      <div className="container-center">
+      <div className="img-container">
         <Image
           src="/ceren-seaside.png"
           alt="Albatross family"
