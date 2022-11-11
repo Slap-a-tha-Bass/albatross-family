@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Header from '@components/nav/header';
 
 export default async function Page() {
   return (
