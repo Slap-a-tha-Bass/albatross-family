@@ -1,0 +1,15 @@
+@use 'colors' as *;
+
+a {
+    text-decoration: none;
+    background-clip: none;
+    color: $primary;
+    font-weight: 700;
+    text-shadow: 0 0 0.5rem $tertiary;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        color: lighten($secondary, 10%);
+        text-decoration: underline;
+    }
+}

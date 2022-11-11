@@ -1,0 +1,9 @@
+@use 'colors' as *;
+
+code {
+    font-family: Consolas,"courier new";
+    color: $dark;
+    background-color: $secondary;
+    padding: 2px;
+    font-size: 105%;
+  }

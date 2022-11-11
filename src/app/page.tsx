@@ -1,21 +1,22 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Header from '@components/nav/header';
 
 export default async function Page() {
   return (
     <div>
-      <div className="img-container">
+      <div className='home-image'>
         <Image
-          src="/ceren-seaside.png"
+          src="/galata.png"
           alt="Albatross family"
           priority
           fill
           placeholder="blur"
           quality={100}
-          blurDataURL={`/ceren-seaside.png`}
+          blurDataURL={`/galata.png`}
         />
       </div>
-      <div className="container-bottom">
+      <div className='main'>
         <h1>albatross family</h1>
         <p>Travelling for family, food, friends, and wine</p>
         <Link href="/blog">View Blog</Link>
