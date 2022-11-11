@@ -5,7 +5,7 @@ import { use } from 'react';
 export default function Page() {
   const data = use(GetPosts());
   return (
-    <div className="container-grid">
+    <div className="grid-center col-2">
       {data
         .sort((a, b) => {
           const dateA: any = new Date(a.posts.date);

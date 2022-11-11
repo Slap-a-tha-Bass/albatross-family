@@ -15,7 +15,7 @@ export default async function Page() {
           blurDataURL={`/galata.png`}
         />
       </div>
-      <div className='main'>
+      <div className='main text-center'>
         <h1>albatross family</h1>
         <p>Travelling for family, food, friends, and wine</p>
         <Link href="/blog">View Blog</Link>
