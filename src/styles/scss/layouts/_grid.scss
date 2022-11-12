@@ -9,9 +9,19 @@
     min-height: 100vh;
     justify-items: center;
 }
-.col-2 {
+.col-count {
     grid-template-columns: repeat(2, 1fr);
     @media screen and (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);
+    }
+    @media screen and (min-width: 769px) and (max-width: 990px) {
+        grid-gap: 2rem;
+    }
+    @media screen and (min-width: 991px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+    }
+    @media screen and (min-width: 1306px) {
+        grid-template-columns: repeat(4, 1fr);
     }
 }

@@ -263,9 +263,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #292b2c, #1d1e1f);
   color: #cbb26a;
-  padding: 0 0.5rem;
+  padding: 1rem 0.5rem 0 0.5rem;
 }
 header h2 {
   font-size: 1.5rem;
@@ -425,6 +424,7 @@ footer {
   position: relative;
   width: 100%;
   height: 60vh;
+  margin: 0 auto;
 }
 @media screen and (max-width: 640px) {
   .home-image {
@@ -433,12 +433,25 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .home-image {
-    height: 60vh;
+    height: 55vh;
   }
 }
 @media screen and (min-width: 769px) {
   .home-image {
+    height: 60vh;
+    width: 85%;
+  }
+}
+@media screen and (min-width: 991px) {
+  .home-image {
     height: 65vh;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .home-image {
+    height: 70vh;
+    width: 60%;
   }
 }
 
@@ -455,12 +468,28 @@ footer {
   justify-items: center;
 }
 
-.col-2 {
+.col-count {
   grid-template-columns: repeat(2, 1fr);
 }
 @media screen and (max-width: 768px) {
-  .col-2 {
+  .col-count {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 990px) {
+  .col-count {
+    grid-gap: 2rem;
+  }
+}
+@media screen and (min-width: 991px) {
+  .col-count {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+}
+@media screen and (min-width: 1306px) {
+  .col-count {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
