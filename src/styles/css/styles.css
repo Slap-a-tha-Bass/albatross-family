@@ -23,6 +23,7 @@ code {
 }
 
 .card-primary {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,6 +56,16 @@ code {
   font-weight: 400;
   color: #cbb26a;
 }
+@media screen and (max-width: 768px) {
+  .card-primary h1,
+.card-primary h2,
+.card-primary h3,
+.card-primary h4,
+.card-primary h5,
+.card-primary h6 {
+    font-size: 1.25rem;
+  }
+}
 .card-primary p {
   position: relative;
   margin: 1rem;
@@ -78,22 +89,8 @@ code {
   color: #998036;
 }
 
-@media (max-width: 1200px) {
-  .card-primary {
-    width: 100%;
-  }
-}
-@media (max-width: 991px) {
-  .card-primary {
-    width: 90%;
-  }
-}
-@media (max-width: 617px) {
-  .card-primary {
-    width: 120%;
-  }
-}
 .card-secondary {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,6 +123,16 @@ code {
   font-weight: 400;
   color: #d8c690;
 }
+@media screen and (max-width: 768px) {
+  .card-secondary h1,
+.card-secondary h2,
+.card-secondary h3,
+.card-secondary h4,
+.card-secondary h5,
+.card-secondary h6 {
+    font-size: 1.25rem;
+  }
+}
 .card-secondary p {
   position: relative;
   margin: 1rem;
@@ -150,6 +157,7 @@ code {
 }
 
 .card-danger {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -181,6 +189,16 @@ code {
   line-height: 1.75rem;
   font-weight: 400;
   color: #d7251f;
+}
+@media screen and (max-width: 768px) {
+  .card-danger h1,
+.card-danger h2,
+.card-danger h3,
+.card-danger h4,
+.card-danger h5,
+.card-danger h6 {
+    font-size: 1.25rem;
+  }
 }
 .card-danger p {
   position: relative;
@@ -406,7 +424,22 @@ footer {
 .home-image {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
+}
+@media screen and (max-width: 640px) {
+  .home-image {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home-image {
+    height: 60vh;
+  }
+}
+@media screen and (min-width: 769px) {
+  .home-image {
+    height: 65vh;
+  }
 }
 
 .grid {

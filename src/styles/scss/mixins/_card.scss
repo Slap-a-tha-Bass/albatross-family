@@ -1,4 +1,5 @@
 @mixin card($bg-color, $text-color, $border-color) {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,6 +30,10 @@
     line-height: 1.75rem;
     font-weight: 400;
     color: $text-color;
+    @media screen and (max-width: 768px) {
+      font-size: 1.25rem;
+      
+    }
   }
   p {
     position: relative;

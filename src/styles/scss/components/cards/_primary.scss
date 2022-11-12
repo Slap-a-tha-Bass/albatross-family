@@ -6,18 +6,18 @@
   @include card($trans-dark, $primary, $primary);
 }
 
-@media (max-width: 1200px) {
-  .card-primary {
-    width: 100%;
-  }
-}
-@media (max-width: 991px) {
-  .card-primary {
-    width: 90%;
-  }
-}
-@media (max-width: 617px) {
-  .card-primary {
-    width: 120%;
-  }
-}
+// @media (max-width: 1200px) {
+//   .card-primary {
+//     width: 100%;
+//   }
+// }
+// @media (max-width: 991px) {
+//   .card-primary {
+//     width: 90%;
+//   }
+// }
+// @media (max-width: 617px) {
+//   .card-primary {
+//     width: 120%;
+//   }
+// }
