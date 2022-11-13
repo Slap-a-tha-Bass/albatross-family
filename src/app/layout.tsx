@@ -5,7 +5,7 @@ import Footer from '@components/nav/footer';
 export default function RootLayout({ children }: any) {
   return (
     <html lang="en">
-      <body className='grid'>
+      <body>
         <Header />
         {children}
         <Footer />

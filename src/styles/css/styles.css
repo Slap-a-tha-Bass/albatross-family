@@ -264,7 +264,7 @@ header {
   justify-content: space-between;
   align-items: center;
   color: #cbb26a;
-  padding: 1rem 0.5rem 0 0.5rem;
+  padding: 0.5rem;
 }
 header h2 {
   font-size: 1.5rem;
@@ -295,11 +295,12 @@ header h2 span {
 }
 
 footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
   color: #cbb26a;
+  font-size: 0.8rem;
 }
 
 .lds-roller {
@@ -458,7 +459,12 @@ footer {
 .grid {
   display: grid;
   grid-gap: 1rem;
-  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2588235294);
+  padding: 1rem;
+  place-items: center;
+}
+.grid img {
+  border-radius: 0.5rem;
 }
 
 .grid-center {
@@ -467,32 +473,41 @@ footer {
   min-height: 100vh;
   justify-items: center;
 }
-
-.col-count {
-  grid-template-columns: repeat(2, 1fr);
+.grid-center img {
+  border-radius: 0.25rem;
 }
+
 @media screen and (max-width: 768px) {
-  .col-count {
-    grid-template-columns: repeat(1, 1fr);
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .grid-center {
+    grid-template-columns: 1fr;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 990px) {
-  .col-count {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-center {
+    grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
   }
 }
 @media screen and (min-width: 991px) {
-  .col-count {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-center {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
   }
 }
 @media screen and (min-width: 1306px) {
-  .col-count {
+  .grid-center {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
 html,
 body {
   padding: 0;

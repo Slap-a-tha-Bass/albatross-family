@@ -1,27 +1,53 @@
+@use '../abstracts/' as *;
+
 .grid {
     display: grid;
     grid-gap: 1rem;
-    min-height: 100vh;
+    background-color: darken($trans-dark, 10%);
+    padding: 1rem;
+    place-items: center;
+    img {
+        border-radius: 0.5rem;
+    }
 }
 .grid-center {
     display: grid;
     grid-gap: 1rem;
     min-height: 100vh;
     justify-items: center;
-}
-.col-count {
-    grid-template-columns: repeat(2, 1fr);
-    @media screen and (max-width: 768px) {
-        grid-template-columns: repeat(1, 1fr);
+    img {
+        border-radius: 0.25rem;
     }
-    @media screen and (min-width: 769px) and (max-width: 990px) {
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .grid-center {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 990px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-center {
+        grid-template-columns: 1fr 1fr;
         grid-gap: 2rem;
     }
-    @media screen and (min-width: 991px) {
+}
+@media screen and (min-width: 991px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-center {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 2rem;
     }
-    @media screen and (min-width: 1306px) {
+}
+@media screen and (min-width: 1306px) {
+    .grid-center {
         grid-template-columns: repeat(4, 1fr);
     }
 }

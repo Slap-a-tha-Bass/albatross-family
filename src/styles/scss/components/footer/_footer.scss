@@ -1,9 +1,10 @@
 @use '../../abstracts' as *;
 
 footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
     color: $primary;
+    font-size: 0.8rem;
 }

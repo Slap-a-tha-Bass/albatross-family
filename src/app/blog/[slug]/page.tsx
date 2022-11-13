@@ -30,10 +30,11 @@ export default function Page({ params }: any) {
   const md = new MarkdownIt();
   const result = md.render(post ? post.content : '');
   return (
-    <div className="container-flex">
+    <div className="">
       <h1>{post?.blogPost.title}</h1>
       {<div dangerouslySetInnerHTML={{ __html: result }} />}
-      {post.blogPost.images &&
+      {post &&
+        post.blogPost.images &&
         post.blogPost.images.map((image: any) => (
           <Image
             key={image}
