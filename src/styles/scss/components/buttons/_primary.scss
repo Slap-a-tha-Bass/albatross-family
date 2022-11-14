@@ -3,5 +3,5 @@
 
 .btn-primary {
   // button($bg-color, $text-color, $border-color)
-  @include button($transparent, $white, $primary);
+  @include button($transparent, $light, $tertiary);
 }

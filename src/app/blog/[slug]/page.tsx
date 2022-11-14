@@ -12,8 +12,8 @@ async function getOnePost({ slug }: any) {
     const markdownWithMetadata = fs
       .readFileSync(`src/posts/${post}`)
       .toString();
-    const { data: blogPost, content } = matter(markdownWithMetadata);
-    return { blogPost, content };
+    const { data: frontmatter, content } = matter(markdownWithMetadata);
+    return { frontmatter, content };
   }
 }
 
@@ -30,18 +30,18 @@ export default function Page({ params }: any) {
   const md = new MarkdownIt();
   const result = md.render(post ? post.content : '');
   return (
-    <div className="">
-      <h1>{post?.blogPost.title}</h1>
+    <div className="blog-content">
+      <h1>{post?.frontmatter.title}</h1>
       {<div dangerouslySetInnerHTML={{ __html: result }} />}
       {post &&
-        post.blogPost.images &&
-        post.blogPost.images.map((image: any) => (
+        post.frontmatter.images &&
+        post.frontmatter.images.map((image: any) => (
           <Image
             key={image}
             src={`/${image}`}
-            alt={post?.blogPost.title}
-            height={post?.blogPost.socialImageHeight}
-            width={post?.blogPost.socialImageWidth}
+            alt={post?.frontmatter.title}
+            height={post?.frontmatter.socialImageHeight}
+            width={post?.frontmatter.socialImageWidth}
           />
         ))}
     </div>

@@ -5,23 +5,24 @@ import { use } from 'react';
 export default function Page() {
   const data = use(GetPosts());
   return (
-    <div className="grid-center col-count">
-      {data
-        .sort((a, b) => {
-          const dateA: any = new Date(a.posts.date);
-          const dateB: any = new Date(b.posts.date);
-          return dateB - dateA;
-        })
-        .map((blog) => (
-          <BlogCard
-            key={blog.posts.title}
-            slug={blog.posts.slug}
-            title={blog.posts.title}
-            date={blog.posts.date}
-            metaTitle={blog.posts.metaTitle}
-            imageURL={blog.posts.socialImage}
-          />
-        ))}
+    <div className="grid-center">
+      {data &&
+        data
+          .sort((a, b) => {
+            const dateA: any = new Date(a.posts.date);
+            const dateB: any = new Date(b.posts.date);
+            return dateB - dateA;
+          })
+          .map((blog) => (
+            <BlogCard
+              key={blog.posts.title}
+              slug={blog.posts.slug}
+              title={blog.posts.title}
+              date={blog.posts.date}
+              metaTitle={blog.posts.metaTitle}
+              imageURL={blog.posts.socialImage}
+            />
+          ))}
     </div>
   );
 }

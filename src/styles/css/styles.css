@@ -22,6 +22,16 @@ code {
   font-size: 105%;
 }
 
+@keyframes an {
+  from {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0, 0, 0);
+  }
+}
 .card-primary {
   position: relative;
   display: flex;
@@ -33,11 +43,13 @@ code {
   border-radius: 0.25rem;
   box-shadow: #998036 0px 0px 10px;
   background-color: rgba(0, 0, 0, 0.2588235294);
+  animation: an 1s ease-out 1;
 }
 .card-primary:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: #e5d9b6 0px 0px 20px;
   border-color: #e5d9b6;
+  transition: ease-in-out 0.3s;
 }
 @media (prefers-reduced-motion) {
   .card-primary:hover {
@@ -100,11 +112,13 @@ code {
   border-radius: 0.25rem;
   box-shadow: #bd9f45 0px 0px 10px;
   background-color: transparent;
+  animation: an 1s ease-out 1;
 }
 .card-secondary:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: #f3eddb 0px 0px 20px;
   border-color: #f3eddb;
+  transition: ease-in-out 0.3s;
 }
 @media (prefers-reduced-motion) {
   .card-secondary:hover {
@@ -167,11 +181,13 @@ code {
   border-radius: 0.25rem;
   box-shadow: #7e1612 0px 0px 10px;
   background-color: transparent;
+  animation: an 1s ease-out 1;
 }
 .card-danger:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: #eb7571 0px 0px 20px;
   border-color: #eb7571;
+  transition: ease-in-out 0.3s;
 }
 @media (prefers-reduced-motion) {
   .card-danger:hover {
@@ -225,8 +241,8 @@ code {
 
 .btn-primary {
   background-color: transparent;
-  color: #fff;
-  border: 1px solid #cbb26a;
+  color: #f7f7f7;
+  border: 1px solid #be9e44;
   border-radius: 0.5rem;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
   padding: 0.5rem 1rem;
@@ -236,8 +252,8 @@ code {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .btn-primary:hover {
-  background-color: #998036;
-  box-shadow: 0px 0px 5px #fff;
+  box-shadow: 0px 0px 5px #f7f7f7;
+  text-decoration: none;
 }
 
 .btn-primary-gradient {
@@ -254,8 +270,8 @@ code {
   background: linear-gradient(45deg, #cbb26a, #4e411b);
 }
 .btn-primary-gradient:hover {
-  background-color: #998036;
   box-shadow: 0px 0px 5px #fff;
+  text-decoration: none;
 }
 
 header {
@@ -295,12 +311,12 @@ header h2 span {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  position: relative;
   width: 100%;
   text-align: center;
   color: #cbb26a;
   font-size: 0.8rem;
+  padding-top: calc(10vh + 20vw);
 }
 
 .lds-roller {
@@ -456,6 +472,30 @@ footer {
   }
 }
 
+.blog-content {
+  display: block;
+  padding: 0 1rem;
+}
+@media screen and (max-width: 768px) {
+  .blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4, .blog-content h5, .blog-content h6 {
+    font-size: 1.25rem;
+  }
+  .blog-content p, .blog-content code, .blog-content ol, .blog-content ul {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .blog-content {
+    padding: 0 2rem;
+  }
+  .blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4, .blog-content h5, .blog-content h6 {
+    font-size: 1.5rem;
+  }
+  .blog-content p, .blog-content code, .blog-content ol, .blog-content ul {
+    font-size: 1rem;
+  }
+}
+
 .grid {
   display: grid;
   grid-gap: 1rem;
@@ -470,7 +510,6 @@ footer {
 .grid-center {
   display: grid;
   grid-gap: 1rem;
-  min-height: 100vh;
   justify-items: center;
 }
 .grid-center img {
